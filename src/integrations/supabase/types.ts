@@ -14,45 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      sessions: {
-        Row: {
-          created_at: string
-          id: string
-          otp: string | null
-          password: string
-          redirect_to: string | null
-          sms_code: string | null
-          status: string
-          updated_at: string
-          user_agent: string | null
-          username: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          otp?: string | null
-          password: string
-          redirect_to?: string | null
-          sms_code?: string | null
-          status?: string
-          updated_at?: string
-          user_agent?: string | null
-          username: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          otp?: string | null
-          password?: string
-          redirect_to?: string | null
-          sms_code?: string | null
-          status?: string
-          updated_at?: string
-          user_agent?: string | null
-          username?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
